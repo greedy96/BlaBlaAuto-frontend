@@ -1,0 +1,26 @@
+<mat-card *ngIf="ride">
+  <div>Miejsce startowe: {{ride.ride_from}}</div>
+  <div>Miejsce docelowe: {{ride.ride_to}}</div>
+  <div>Wolne miejsca: {{ride.seats - ride.occupied_seats}}</div>
+  <div>Cena: {{ride.price}}zł</div>
+  <div>Data wyjazdu {{formatDate(ride.date)}}</div>
+
+  <div *ngIf="ride.passengers && ride.passengers.length > 0" class="passagers-list">
+    <div>Lista pasażerów:</div>
+    <div *ngFor="let passenger of ride.passengers">
+      <li>
+        {{passenger.first_name}} {{passenger.last_name}} {{passenger.email}}
+      </li>
+    </div>
+  </div>
+
+  <div *ngIf="!ride.is_passenger && ride.seats-ride.occupied_seats > 0" class="add-button">
+    <button mat-raised-button
+            class="full-width-button"
+            type="submit"
+            color="primary"
+            (click)="addPassenger()">
+      Dodaj mnie
+    </button>
+  </div>
+</mat-card>

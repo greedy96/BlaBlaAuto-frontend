@@ -1,0 +1,22 @@
+.content {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #666666;
+}
+
+div {
+  margin: 5px 0;
+}
+
+.green-shadow {
+  box-shadow: 3px 3px 5px 5px rgba(0, 128, 0, 0.5);
+}
+
+.normal-shadow {
+  box-shadow: 3px 3px 5px 5px #333333;
+}

@@ -1,0 +1,52 @@
+<div class="login-content">
+  <mat-card class="app-input-section login-form"
+            [formGroup]="addRideForm">
+    <mat-card-content>
+      <div class="title">
+        Dodaj przejazd
+      </div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Miejsce wyjazdu</mat-label>
+        <input formControlName="ride_from"
+               matInput
+               placeholder="Miejsce wyjazdu" required/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Miejsce docelowe</mat-label>
+        <input formControlName="ride_to"
+               matInput
+               placeholder="Miejsce docelowe" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ilość siedzeń</mat-label>
+        <input formControlName="seats"
+               matInput type="number"
+               placeholder="Ilość siedzeń" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data wyjazdu</mat-label>
+        <input formControlName="start_date"
+               matInput type="datetime-local"
+               [min]="todayDate"
+               required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Cena</mat-label>
+        <input formControlName="price"
+               matInput type="number"
+               placeholder="Cena" required/>
+      </mat-form-field>
+
+      <button class="full-width-button"
+              mat-raised-button
+              type="submit"
+              color="primary"
+              (click)="addRide()">
+        Dodaj
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

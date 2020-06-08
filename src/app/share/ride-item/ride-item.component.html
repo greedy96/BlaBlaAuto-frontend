@@ -1,0 +1,8 @@
+<div class="content" [ngClass]="{'green-shadow': colorFuture && isDateFuture(),
+     'normal-shadow': !(colorFuture && isDateFuture())}" (click)="navigateToDetails()">
+  <div>Miejsce startowe: {{ride.ride_from}}</div>
+  <div>Miejsce docelowe: {{ride.ride_to}}</div>
+  <div>Wolne miejsca: {{ride.seats - ride.occupied_seats}}</div>
+  <div>Cena: {{ride.price}}zł</div>
+  <div>Data wyjazdu {{formatDate(ride.date)}}</div>
+</div>

@@ -1,0 +1,39 @@
+.content {
+  flex: 1 0 auto;
+}
+
+.mat-figure {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body {
+  font-size: 20px;
+}
+
+mat-card {
+  border-radius: 20px;
+  width: 700px;
+  height: auto;
+  margin: 50px auto;
+  color: white;
+  background-color: #454647;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.mat-button {
+  min-width: 100px;
+}
+
+input::placeholder {
+  color: #AAAAAA;
+}
+
+button {
+  color: #AAAAAA;
+}

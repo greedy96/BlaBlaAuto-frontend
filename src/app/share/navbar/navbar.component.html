@@ -1,0 +1,62 @@
+<div class="navbar">
+  <mat-toolbar color="primary" role="heading">
+    <span>
+      <a (click)="redirectToHomePage()" class="logo">
+        BlaBlaAuto
+      </a>
+    </span>
+
+    <div class="navbar-authorized">
+      <div class="navbar-right">
+
+        <button mat-stroked-button class="mat-button mat-button-base nav-text"
+                (click)="redirectToSearchRide()">
+          <mat-icon matPrefix>
+            search
+          </mat-icon>
+          <span class="mat-button-wrapper">
+              Szukaj przejazdu
+          </span>
+        </button>
+
+        <button mat-stroked-button class="mat-button mat-button-base nav-text"
+                (click)="redirectToAddRide()">
+          <mat-icon matPrefix>
+            add_circle_outline
+          </mat-icon>
+
+          <span class="mat-button-wrapper">
+              Dodaj przejazd
+          </span>
+        </button>
+
+        <span *ngIf="isLoggedIn">
+          <button (click)="redirectToMyProfile()"
+                  mat-stroked-button class="mat-button mat-button-base nav-text">
+            Profil
+          </button>
+          <button (click)="logout()"
+                  mat-stroked-button class="mat-button mat-button-base nav-text">
+            Wyloguj
+          </button>
+        </span>
+
+        <span *ngIf="!isLoggedIn">
+
+          <button mat-stroked-button class="mat-button mat-button-base nav-text"
+                  (click)="redirectToLoginPage()">
+           <span class="mat-button-wrapper">
+              Zaloguj
+          </span>
+          </button>
+          <button mat-stroked-button class="mat-button mat-button-base nav-text"
+                  (click)="redirectToRegistrationPage()">
+           <span class="mat-button-wrapper">
+              Rejestracja
+          </span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>

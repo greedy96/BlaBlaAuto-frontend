@@ -1,0 +1,36 @@
+<div class="login-content">
+  <mat-card class="app-input-section login-form"
+            [formGroup]="searchRideForm">
+    <mat-card-content>
+      <div class="title">
+        Szukaj przejazdu
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Miejsce wyjazdu</mat-label>
+        <input formControlName="ride_from"
+               matInput required/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Miejsce docelowe</mat-label>
+        <input formControlName="ride_to"
+               matInput required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data wyjazdu</mat-label>
+        <input formControlName="start_date"
+               matInput type="date"
+               [min]="todayDate"
+               required/>
+      </mat-form-field>
+
+      <button mat-raised-button
+              class="full-width-button"
+              type="submit"
+              color="primary"
+              (click)="search()">
+        Szukaj
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

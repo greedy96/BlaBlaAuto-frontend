@@ -1,0 +1,34 @@
+<mat-tab-group (selectedTabChange)="changeBoard($event)" mat-stretch-tabs dynamicHeight class="tab-content" color="accent">
+  <mat-tab label="Profil">
+    <div class="content">
+
+      <div class="title">
+        Twój profil
+      </div>
+      <ul *ngIf="profile.user" class="user-data">
+        <li>Nazwa użytkownika: {{profile.user.username}}</li>
+        <li *ngIf="profile.user.first_name">Imię: {{profile.user.first_name}}</li>
+        <li *ngIf="profile.user.last_name">Nazwisko: {{profile.user.last_name}}</li>
+        <li *ngIf="profile.user.email">Email: {{profile.user.email}}</li>
+      </ul>
+    </div>
+  </mat-tab>
+  <mat-tab label="Moje przejazdy">
+    <div class="content">
+
+      <app-ride-item *ngFor="let ride of profile.historicRides" [ride]="ride" [colorFuture]="true">
+      </app-ride-item>
+
+    </div>
+  </mat-tab>
+  <mat-tab label="Przejazdy">
+    <div class="content">
+
+      <app-ride-item *ngFor="let ride of profile?.passengerRides" [ride]="ride" [colorFuture]="true">
+      </app-ride-item>
+
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+

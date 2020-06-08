@@ -1,0 +1,44 @@
+.tab-content {
+  width: 700px;
+  height: auto;
+  margin: 100px auto 20px;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+::ng-deep .mat-tab-header {
+  background-color: #673ab7;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+::ng-deep .mat-tab-label {
+  color: #DDDDDD;
+  font-size: 22px;
+}
+
+.content {
+  border-radius: 20px;
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  color: white;
+  background-color: #454647;
+  padding: 80px;
+  box-sizing: border-box;
+  min-height: 500px;
+}
+
+.user-data {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.user-data > li {
+  padding: 10px 0 10px 30px;
+  border: 2px solid #666666;
+  border-radius: 20px;
+  margin: 10px 0;
+  font-size: 22px;
+}

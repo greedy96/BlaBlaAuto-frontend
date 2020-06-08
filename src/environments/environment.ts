@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoints: {
+    apiPath: 'http://localhost:8000',
+    loginPath: '/auth/login',
+    registrationPath: '/auth/register',
+    profilePath: '/my/profile',
+    historicRidesPath: '/my/historic-rides',
+    participantRidesPath: '/my/participant-rides',
+    ridesPath: '/rides'
+  }
 };
 
 /*

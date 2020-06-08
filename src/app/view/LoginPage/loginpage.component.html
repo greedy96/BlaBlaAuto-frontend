@@ -1,0 +1,36 @@
+<div class="login-content">
+  <mat-card class="app-input-section login-form"
+            [formGroup]="loginForm">
+    <mat-card-content>
+      <h2>
+        Logowanie
+      </h2>
+      <mat-form-field appearance="outline">
+        <mat-label>Nazwa użytownika</mat-label>
+        <input formControlName="username"
+               matInput required/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Hasło</mat-label>
+        <input class="password"
+               [type]="hide ? 'password' : 'text'"
+               formControlName="password"
+               matInput required/>
+        <button mat-icon-button matSuffix
+                (click)="hide = !hide">
+          <mat-icon>
+            {{hide ? 'visibility_off' : 'visibility'}}
+          </mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button
+              class="full-width-button"
+              type="submit"
+              color="primary"
+              (click)="login()">
+        Zaloguj
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

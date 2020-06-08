@@ -1,0 +1,7 @@
+<mat-card>
+  <h1>
+    Lista znalezionych przejazdów
+  </h1>
+  <app-ride-item *ngFor="let ride of rides" [ride]="ride">
+  </app-ride-item>
+</mat-card>
